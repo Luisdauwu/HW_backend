@@ -18,7 +18,7 @@ pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 user_api_router = APIRouter()
 
-@user_api_router.post("/auth")
+@user_api_router.post("/auth", tags=["Auth"])
 async def login(user:user):
     user_exits = collection_users.find_one({"username":user.username})
     if user_exits:  
@@ -29,7 +29,7 @@ async def login(user:user):
             return {"status":"ok","token":token}
     raise HTTPException(status_code=401, detail="User or password are incorrect")
 
-@user_api_router.post("/signup")
+@user_api_router.post("/signup", tags=["Auth"])
 async def signup(user:user):
     password_hashed=get_password_hash(user.password)
     user_db= {

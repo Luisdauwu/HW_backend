@@ -3,7 +3,11 @@ from routes.car_routes import cars_api_router
 from routes.user_routes import user_api_router
 from fastapi.middleware.cors import CORSMiddleware
 
-app=FastAPI()
+app=FastAPI(title="HotWheels Market",
+    description="Backend del proyecto HW market",
+    version="0.0.1",
+    )
+
 origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
