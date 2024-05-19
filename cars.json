@@ -1,0 +1,35 @@
+[
+    {
+        "id": "ed00bc71-ba85-40a5-89bc-7b356d6bba16",
+        "marca": "Audi",
+        "modelo": "A1",
+        "año": 2005,
+        "precio": "$1023,257.58",
+        "kilometraje": 393,
+        "color": "Blanco",
+        "imagen_principal": "https://images1.autocasion.com/actualidad/wp-content/uploads/2011/11/Audi-A1-Sportback-portada.jpg",
+        "descripcion": "Veniam sint magna nisi laborum occaecat magna voluptate cupidatat voluptate ipsum. Commodo do cillum ea labore culpa ut velit labore. Irure sunt eu reprehenderit eu consectetur cillum veniam aute quis pariatur. Aute ea aute consectetur pariatur in ut id et.\r\n"
+    },
+    {
+        "id": "d334828c-31d2-4887-a33a-5772e3f0e2ec",
+        "marca": "Mazda",
+        "modelo": "Cx-5",
+        "año": 2021,
+        "precio": "$30,111.58",
+        "kilometraje": 508,
+        "color": "Rojo",
+        "imagen_principal": "https://www.mazda.com.co/link/46667b7101e146c2a2ba7cadb3d384c2.aspx",
+        "descripcion": "Occaecat consectetur dolor elit in ea officia duis officia. Irure esse eiusmod officia occaecat tempor anim. Deserunt est officia officia aute sit ullamco qui dolore irure anim. Ullamco quis quis minim laboris commodo sunt pariatur sint aliquip enim anim deserunt aliquip fugiat. Sunt qui magna incididunt cillum. Ex commodo ipsum irure aliqua anim excepteur incididunt officia commodo.\r\n"
+    },
+    {
+        "id": "ccab2ded-db60-44a0-bc4a-72d4d941d4cf",
+        "marca": "Mercedes-AMG",
+        "modelo": "GT 2020",
+        "año": 2020,
+        "precio": "$127000,705.85",
+        "kilometraje": 134,
+        "color": "negro",
+        "imagen_principal": "https://img.remediosdigitales.com/0b7d3d/mercedes-amg-gt-2020-002/1366_2000.jpg",
+        "descripcion": "Laborum aliquip commodo est fugiat dolor. Lorem reprehenderit et ad reprehenderit velit aliqua exercitation ad reprehenderit veniam elit incididunt aliquip. Et Lorem commodo sint veniam ut ut reprehenderit amet ea Lorem laboris tempor consequat tempor. Eu ex aute mollit ex ex. Anim ad occaecat voluptate nostrud ea dolore in sunt consequat adipisicing quis. Consectetur esse do nisi officia irure laboris excepteur commodo fugiat.\r\n"
+    }
+]
