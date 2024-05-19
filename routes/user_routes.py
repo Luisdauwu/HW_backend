@@ -7,9 +7,11 @@ from pydantic import BaseModel
 from models.user_models import user
 from schema.cars_schema import car_serializer, cars_serializer
 import uuid
-from dotenv import dotenv_values
+import os
+from dotenv import load_dotenv
 
-config = dotenv_values(".env")
+
+load_dotenv()
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -48,5 +50,5 @@ def create_access_token(data: dict):
     to_encode = data.copy()
     expire = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, config["SECRET_KEY"], algorithm=config["ALGORITHM"])
+    encoded_jwt = jwt.encode(to_encode, os.getenv("SECRET_KEY"), algorithm=os.getenv("ALGORITHM"))
     return encoded_jwt
