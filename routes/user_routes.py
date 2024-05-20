@@ -27,18 +27,22 @@ async def login(user:user):
         if password_verified:
             token=create_access_token(user_exits)
             return {"status":"ok","token":token}
-    raise HTTPException(status_code=401, detail="User or password are incorrect")
+    raise HTTPException(status_code=401, detail="Usuario o contraseña incorrecta!")
 
 @user_api_router.post("/signup", tags=["Auth"])
 async def signup(user:user):
-    password_hashed=get_password_hash(user.password)
-    user_db= {
-        "_id":uuid.uuid4().hex,
-        "username": user.username,
-        "password": password_hashed
-    }
-    collection_users.insert_one(user_db)
-    return {"status":"ok"}
+    user_exits= collection_users.find_one({"username":user.username})
+    if not user_exits:
+        password_hashed=get_password_hash(user.password)
+        user_db= {
+            "_id":uuid.uuid4().hex,
+            "username": user.username,
+            "password": password_hashed
+        }
+        collection_users.insert_one(user_db)
+        return {"status":"ok"}
+    else:
+        raise HTTPException(status_code=400, detail="El usuario ya existe!")
 
 def get_password_hash(password):
     return pwd_context.hash(password)

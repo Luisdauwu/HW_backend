@@ -9,3 +9,4 @@ class Cars(BaseModel):
     color: str
     imagen_principal: str
     descripcion: str
+    urlShop: str

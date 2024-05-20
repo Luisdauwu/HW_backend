@@ -9,6 +9,7 @@ def car_serializer(car)->dict:
         "color": car["color"],
         "imagen_principal": car["imagen_principal"],
         "descripcion": car["descripcion"],
+        "urlShop": car["urlShop"],
     }
 
 def cars_serializer(cars) -> list:
