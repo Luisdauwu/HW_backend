@@ -32,12 +32,14 @@ async def login(user:user):
 @user_api_router.post("/signup", tags=["Auth"])
 async def signup(user:user):
     user_exits= collection_users.find_one({"username":user.username})
+    role=user.role 
     if not user_exits:
         password_hashed=get_password_hash(user.password)
         user_db= {
             "_id":uuid.uuid4().hex,
             "username": user.username,
-            "password": password_hashed
+            "password": password_hashed,
+            "role": role
         }
         collection_users.insert_one(user_db)
         return {"status":"ok"}
